@@ -2,12 +2,12 @@
 
 body {
   text-align:center;
-  background:linear-gradient(141deg, #000000 25%, #000000 40%, #000000 55%);
+  background:linear-gradient(141deg, #000000 25%, #0000ff 40%, #000000 40%, #ffffff 25%, #0000ff 40%, #000000 55%);
   color:#ffffff;
   font-family:'Roboto';
-  font-weight:300;
-  font-size:32px;
-  padding-top:40vh;
+  font-weight:302;
+  font-size:28px;
+  padding-top:42vh;
   height:100vh;
   overflow:hidden;
   -webkit-backface-visibility: hidden;
