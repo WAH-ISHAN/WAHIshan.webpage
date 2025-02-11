@@ -308,10 +308,12 @@ transform: translate();
 }
 
 .logo {
-    font-size: 1.7rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 500;
     color: #fff; /* Set the logo color to white */
     text-decoration: none;
+
+    
 }
 .logo img {
     height: 100px; /* Adjust as needed */
@@ -327,17 +329,18 @@ transform: translate();
 .nav-links {
     font-size: 1.2rem;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     
 }
 
 .nav-links li {
     list-style: none;
+    font-weight: bold;
 }
 
 .nav-links a {
     color: #fff;
-    transition: color 0.3s;
+    transition: color 0.2s;
     text-decoration: none;
 }
 
@@ -729,7 +732,7 @@ transform: translate();
   }
   
 
-.bbb {
+.headd {
     font-size: 17px;
     background: transparent;
     border: none;
@@ -741,7 +744,7 @@ transform: translate();
     cursor: pointer;
   }
   
-  .bbb::before {
+  .headd::before {
     content: "";
     position: absolute;
     left: 0;
@@ -752,16 +755,16 @@ transform: translate();
     transition: 0.5s ease;
   }
   
-  .bbb:hover {
+  .headd:hover {
     color: #1e1e2b;
     transition-delay: 0.5s;
   }
   
-  .bbb:hover::before {
+  .headd:hover::before {
     width: 100%;
   }
   
-  .bbb::after {
+  .headd::after {
     content: "";
     position: absolute;
     left: 0;
@@ -773,7 +776,7 @@ transform: translate();
     z-index: -1;
   }
   
-  .bbb:hover::after {
+  .headd:hover::after {
     height: 100%;
     transition-delay: 0.4s;
     color: aliceblue;
@@ -804,3 +807,49 @@ transform: translate();
                 0 0 50px #00a2ff,
                 0 0 100px #00a2ff;
   }
+  .carousels {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    height: 20vh;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    
+}
+
+.wrap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 150px;
+    justify-items: stretch;
+    animation: slide 15s linear infinite;
+    animation-play-state: running;
+}
+
+.wrap img {
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrap img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.8), 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.wrap:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(calc(-4 * 250px));
+    }
+}
